@@ -1,8 +1,17 @@
 import { FontAwesome } from "@expo/vector-icons";
+import { useState } from "react";
 import { StyleSheet, TextInput, View } from "react-native";
 import { elevation } from "../common/styles";
 
-export default function Search() {
+export default function Search({ setTerm }) {
+  const [input, setInput] = useState("");
+
+  const handleEndEditing = () => {
+    if (!input) return;
+    setTerm(input);
+    setInput("");
+  };
+
   return (
     <View style={[styles.container, styles.elevation]}>
       <FontAwesome
@@ -12,6 +21,9 @@ export default function Search() {
       <TextInput
         style={styles.input}
         placeholder="Restaurants, food"
+        value={input}
+        onChangeText={(text) => setInput(text)}
+        onEndEditing={handleEndEditing}
       ></TextInput>
     </View>
   );

@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Expo and TypeScript",
+    "name": "Restaurants Search",
     "description": "Showcase of an Expo app coded in TypeScript.",
     "slug": "expo-and-typescript",
     "privacy": "public",
@@ -8,10 +8,10 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "primaryColor": "#fff",
-    "icon": "./assets/app-icon.png",
+    "icon": "./assets/icon.png",
     "splash": {
-      "backgroundColor": "#fff",
-      "image": "./assets/splash-screen.png",
+      "backgroundColor": "#000000",
+      "image": "./assets/splash.png",
       "resizeMode": "contain"
     },
     "updates": {
